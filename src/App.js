@@ -1,11 +1,11 @@
 import WrappedLayout from './wrapped/WrappedLayout';
 import './App.css';
-import Products from './pages/Meals';
+import Meals from './pages/Meals';
 
 function App() {
   return (
     <WrappedLayout>
-      <Products />
+      <Meals />
     </WrappedLayout>
   );
 }

@@ -12,7 +12,7 @@ const TableStyled = styled(Table)`
   }
 `;
 
-const Products = (props) => {
+const Meals = (props) => {
   const columns = [
     {
       title: 'No.',
@@ -104,7 +104,7 @@ const Products = (props) => {
         title={() => {
           return (
             <div className="table__title">
-              <Typography.Title level={5}>Product List</Typography.Title>
+              <Typography.Title level={5}>Meals List</Typography.Title>
               <Button type="primary" onClick={handleAdd}>
                 Add new
               </Button>
@@ -127,4 +127,4 @@ const Products = (props) => {
   );
 };
 
-export default Products;
+export default Meals;
