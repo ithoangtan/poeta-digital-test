@@ -1,5 +1,5 @@
 import { Modal, Button, Form, Input, Typography, message } from 'antd';
-import { memo, useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useDebounce } from 'react-use';
 import qs from 'query-string';
 
@@ -179,4 +179,4 @@ const ActionModal = (props) => {
     </Modal>
   );
 };
-export default memo(ActionModal, (prevProps, nextProps) => prevProps.meals?.length !== nextProps.meals?.length);
+export default ActionModal;
