@@ -114,6 +114,7 @@ const Meals = (props) => {
         loading={loading}
         columns={columns}
         dataSource={meals}
+        scroll={{ x: 400 }}
       />
       <ActionModal
         visible={Boolean(action)}

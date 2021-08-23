@@ -12,7 +12,7 @@ const LayoutWrapped = (props) => {
           <Menu.Item key={1}>{`Meals`}</Menu.Item>
         </Menu>
       </Header>
-      <Content style={{ padding: '0 50px' }}>
+      <Content className="layout__content">
         <Breadcrumb style={{ margin: '16px 0' }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>Meal List</Breadcrumb.Item>
