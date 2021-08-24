@@ -123,16 +123,16 @@ const ActionModal = (props) => {
     if (props.action === ACTIONS.EDIT) indexOfMeal = props.meals?.findIndex((m) => m.strMeal === props.dataAction?.strMeal);
     switch (props.action) {
       case ACTIONS.ADD:
-        if (indexOfMeal === -1) props.setMeals([...props.meals, { strMeal: values.strMeal, count: 1 }]);
+        if (indexOfMeal === -1) props.setMeals([...props.meals, { strMeal: values.strMeal, count: countMeal }]);
         else {
           const newMeals = Array.from(props.meals);
-          newMeals[indexOfMeal] = { ...newMeals[indexOfMeal], strMeal: values.strMeal, count: newMeals[indexOfMeal].count + 1 };
+          newMeals[indexOfMeal] = { ...newMeals[indexOfMeal], strMeal: values.strMeal, count: countMeal };
           props.setMeals(newMeals);
         }
         break;
       case ACTIONS.EDIT:
         const newMeals = Array.from(props.meals);
-        newMeals[indexOfMeal] = { ...newMeals[indexOfMeal], strMeal: values.strMeal };
+        newMeals[indexOfMeal] = { ...newMeals[indexOfMeal], strMeal: values.strMeal, count: countMeal };
         props.setMeals(newMeals);
         break;
       default:

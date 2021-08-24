@@ -63,14 +63,14 @@ const Meals = (props) => {
   const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(false);
   const [needLoadAgain, setNeedLoadAgain] = useState(false);
-  // const [params, setParams] = useState({ s: 'Arrabiata' });
+  // const [params, setParams] = useState({ s: 'Arrabiata' }); // May be hard code for example test
   const [dataAction, setDataAction] = useState();
   const [action, setAction] = useState();
 
   useEffect(() => {
     setLoading(true);
     const params = {
-      s: 'Arrabiata'
+      s: 'Arrabiata' // May be hard code for example test
     };
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?${qs.stringify(params)}`)
       .then((res) => res.json())
